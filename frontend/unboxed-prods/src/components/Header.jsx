@@ -16,11 +16,14 @@ function Header() {
   return (
     <header className="w-full sticky top-0 z-50 mt-3">
       
-      {/* Main Header Container (centered, constrained width) */}
-      <div className="mx-auto text-white rounded max-w-6xl px-4 py-3 bg-gradient-to-r from-[#282665] to-[#000000] relative">
+      <div className="mx-auto text-white max-w-8xl px-4 py-3 bg-gradient-to-r from-[#282665] to-[#000000] relative">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="text-2xl font-bold">MyLogo</div>
+          <div>
+            <h1 className="text-2xl md:text-3xl font-light tracking-wide font-christmas">
+              Unboxed <span className="text-orange-500">Productions</span>
+            </h1>
+          </div>
 
           {/* Navigation - Center */}
           <nav className="hidden md:flex absolute left-1/2 px-4 bg-white text-black -translate-x-1/2 font-playfair">
@@ -59,11 +62,9 @@ function Header() {
           </button>
         </div>
 
-        {/* Hamburger Panel */}
         {open && (
           <div className="mt-4 rounded-lg bg-white text-black shadow-lg">
             <div className="p-4 grid gap-4">
-              {/* Mobile Nav */}
               <ul className="md:hidden space-y-3 font-medium">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
@@ -71,7 +72,6 @@ function Header() {
                 <li><a href="#">Contact</a></li>
               </ul>
 
-              {/* Extra Info */}
               <div className="border-t pt-3 text-sm text-gray-600">
                 <p>Extra info:</p>
                 <ul className="mt-2 space-y-2">
@@ -84,7 +84,6 @@ function Header() {
         )}
       </div>
 
-      {/* Full-Width Bottom Offers Bar */}
       <div className="w-full h-10 font-playfair mt-2 bg-gradient-to-r from-[#0a1f5c] to-black flex justify-center items-center overflow-hidden">
         <div className="flex space-x-8 text-white font-semibold text-sm sm:text-base animate-marquee px-4 md:px-8">
           {offers.map((offer, idx) => (

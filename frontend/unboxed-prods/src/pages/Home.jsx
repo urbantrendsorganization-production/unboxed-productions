@@ -1,6 +1,9 @@
 import { Button } from "@/components/ui/button"
 import React from "react"
 import Services from "./Services"
+import Works from "./Works"
+import Testimonials from "./Testimonials"
+import Booking from "./Booking"
 
 function Home() {
     return (
@@ -90,6 +93,12 @@ function Home() {
 
 
             <Services />
+
+            <Works />
+
+            <Testimonials />
+
+            <Booking />
 
 
         </>
