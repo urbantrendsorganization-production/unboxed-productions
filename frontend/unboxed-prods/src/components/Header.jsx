@@ -3,18 +3,18 @@ import React, { useState } from "react"
 function Header() {
   const [open, setOpen] = useState(false)
 
-  const offers = [
-    "events offers",
-    "exhibitions offers",
-    "videography offers",
-    "corporate offers",
-    "festivals offers",
-    "photography offers",
-    "cinematography offers",
-  ]
+  // const offers = [
+  //   "events offers",
+  //   "exhibitions offers",
+  //   "videography offers",
+  //   "corporate offers",
+  //   "festivals offers",
+  //   "photography offers",
+  //   "cinematography offers",
+  // ]
 
   return (
-    <header className="w-full sticky top-0 z-50 mt-3">
+    <header className="w-full sticky top-0 z-50 mt-3 mb-3">
       
       <div className="mx-auto text-white max-w-8xl px-4 py-3 bg-gradient-to-r from-[#282665] to-[#000000] relative">
         <div className="flex items-center justify-between">
@@ -84,13 +84,7 @@ function Header() {
         )}
       </div>
 
-      <div className="w-full h-10 font-playfair mt-2 bg-gradient-to-r from-[#0a1f5c] to-black flex justify-center items-center overflow-hidden">
-        <div className="flex space-x-8 text-white font-semibold text-sm sm:text-base animate-marquee px-4 md:px-8">
-          {offers.map((offer, idx) => (
-            <span key={idx}>{offer}</span>
-          ))}
-        </div>
-      </div>
+      
     </header>
   )
 }

@@ -9,87 +9,85 @@ function Home() {
     return (
         <>
             {/* Hero */}
-            <div
-                className="relative w-full h-screen bg-cover bg-center"
-                style={{ backgroundImage: "url(/mainbg.jpg)" }}
-            >
-                {/* Dark overlay */}
-                <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/70" />
+<div className="relative w-full h-screen isolate">
+  {/* Main background */}
+  <img
+    src="/mainbg.jpg"
+    alt="Main background"
+    loading="eager"
+    className="absolute inset-0 w-full h-full object-cover transform-gpu will-change-transform pointer-events-none select-none"
+  />
 
-                <section className="relative w-full h-screen overflow-hidden">
+  {/* Gradient overlay */}
+  <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/70" />
 
-                    {/* Landscape main image (background) */}
-                    <div
-                        className="absolute inset-0 opacity-45 w-full h-full bg-cover bg-center"
-                        style={{ backgroundImage: "url(/photographer.jpg)" }}
-                    >
-                        {/* Optional dark overlay */}
-                        <div className="absolute inset-0 bg-black/40" />
-                    </div>
+  <section className="relative w-full h-screen overflow-hidden isolate">
 
-                    {/* Content over the hero */}
-                    <div className="relative z-10 flex flex-col justify-center h-full max-w-6xl mx-auto px-4 text-white space-y-6">
+    {/* Landscape background image */}
+    <img
+      src="/photographer.jpg"
+      alt="Photographer background"
+      className="absolute inset-0 w-full h-full object-cover opacity-45 transform-gpu will-change-transform pointer-events-none select-none"
+    />
 
-                        {/* Headline */}
-                        <h1 className="text-4xl sm:text-5xl md:text-6xl leading-tight font-kufam">
-                            CRAFTING MOMENTS YOU <br className="hidden md:block" />CAN HEAR AND FEEL
-                        </h1>
+    {/* Dark overlay */}
+    <div className="absolute inset-0 bg-black/40" />
 
-                        {/* Supporting text */}
-                        <p className="text-lg sm:text-xl md:text-2xl max-w-2xl font-kufam">
-                            We turn ideas into cinematic visuals that captivate your audience and drive results. Your story, our lens.
-                        </p>
+    {/* Content */}
+    <div className="relative z-10 flex flex-col justify-center h-full max-w-6xl mx-auto px-4 text-white space-y-6">
 
-                        {/* CTA Buttons */}
-                        <div className="flex flex-col sm:flex-row gap-4 mt-4">
-                            <a
-                                href="#services"
-                                className="px-6 py-3 bg-gradient-to-r from-[#0a1f5c] to-black hover:bg-red-700 text-white font-semibold rounded-lg transition-colors duration-300 text-center"
-                            >
-                                Get Started
-                            </a>
-                            <a
-                                href="#portfolio"
-                                className="px-6 py-3 bg-white hover:bg-gray-200 text-gray-900 font-semibold rounded-lg transition-colors duration-300 text-center"
-                            >
-                                See Portfolio
-                            </a>
-                        </div>
+      <h1 className="text-4xl sm:text-5xl md:text-6xl leading-tight font-kufam">
+        CRAFTING MOMENTS YOU <br className="hidden md:block" />
+        CAN HEAR AND FEEL
+      </h1>
 
-                        {/* Available festivals box */}
-                        <div
-                            className="mt-8 h-32 flex justify-center items-center rounded-lg max-w-md relative overflow-hidden"
-                            style={{
-                                boxShadow: '0 4px 15px rgba(0, 0, 0, 0.1)',
-                                backgroundImage: 'url(/fest.jpg)',
-                                backgroundSize: 'cover',
-                                backgroundPosition: 'center',
-                            }}
-                        >
-                            {/* Dark overlay for opacity */}
-                            <div className="absolute inset-0 bg-black/60" />
+      <p className="text-lg sm:text-xl md:text-2xl max-w-2xl font-kufam">
+        We turn ideas into cinematic visuals that captivate your audience and drive results.
+        Your story, our lens.
+      </p>
 
-                            {/* Button/content */}
-                            <div className="relative z-10 space-x-3">
-                                <Button>Available festivals</Button>
-                                <Button>Book festival</Button>
-                            </div>
-                        </div>
+      {/* CTA Buttons */}
+      <div className="flex flex-col sm:flex-row gap-4 mt-4">
+        <a
+          href="#services"
+          className="px-6 py-3 bg-gradient-to-r from-[#0a1f5c] to-black text-white font-semibold rounded-lg transition"
+        >
+          Get Started
+        </a>
+        <a
+          href="#portfolio"
+          className="px-6 py-3 bg-white hover:bg-gray-200 text-gray-900 font-semibold rounded-lg transition"
+        >
+          See Portfolio
+        </a>
+      </div>
 
+      {/* Available festivals box */}
+      <div className="mt-8 h-32 flex justify-center items-center rounded-lg max-w-md relative overflow-hidden isolate shadow-lg">
+        <img
+          src="/fest.jpg"
+          alt="Festival background"
+          className="absolute inset-0 w-full h-full object-cover transform-gpu will-change-transform"
+        />
 
-                    </div>
+        <div className="absolute inset-0 bg-black/60" />
 
+        <div className="relative z-10 space-x-3">
+          <Button>Available festivals</Button>
+          <Button>Book festival</Button>
+        </div>
+      </div>
+    </div>
 
-                    {/* Portrait accent image (bottom-right) */}
-                    <div
-                        className="absolute bottom-0 right-20 w-1/4 opacity-15 h-3/4 md:w-1/5 md:h-4/5 bg-cover bg-center rounded-lg shadow-xl"
-                        style={{ backgroundImage: "url(/grapher.jpg)" }}
-                    />
-                </section>
+    {/* Portrait accent image */}
+    <img
+      src="/grapher.jpg"
+      alt="Portrait accent"
+      className="absolute bottom-0 right-20 w-1/4 h-3/4 md:w-1/5 md:h-4/5 opacity-15 object-cover rounded-lg shadow-xl transform-gpu will-change-transform pointer-events-none select-none"
+    />
+  </section>
+</div>
 
-
-
-            </div>
 
 
             <Services />
